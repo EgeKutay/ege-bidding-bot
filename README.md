@@ -39,10 +39,38 @@ The bot consists of 4 classes:
 
 Requires Java 8+.
 
+## Building
+
+### Linux / macOS
+
+```bash
+javac -d out src/*.java
+echo "Main-Class: BiddingBot" > out/MANIFEST.MF
+cd out && jar cfm ../ege-bidding-bot.jar MANIFEST.MF *.class
+```
+
+### Windows (PowerShell)
+
+```powershell
+javac -d out src\*.java
+"Main-Class: BiddingBot" | Out-File -Encoding ascii out\MANIFEST.MF
+cd out
+jar cfm ..\ege-bidding-bot.jar MANIFEST.MF *.class
+cd ..
+```
+
 ## Running
 
 Place `ege-bidding-bot.jar` in a subdirectory of the harness working directory and run:
 
+### Linux / macOS
+
 ```bash
+java -jar harness.jar
+```
+
+### Windows (PowerShell)
+
+```powershell
 java -jar harness.jar
 ```
