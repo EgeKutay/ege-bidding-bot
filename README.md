@@ -37,14 +37,6 @@ The bot consists of 4 classes:
 - **Subscribed**: Y = 1.20x, N = 0.80x.
 - **Age**: Peak at 25-34 (1.15x), tapering to 0.85x at 55+.
 
-## Building
-
-```bash
-javac -d out src/*.java
-echo "Main-Class: BiddingBot" > out/MANIFEST.MF
-cd out && jar cfm ../ege-bidding-bot.jar MANIFEST.MF *.class
-```
-
 Requires Java 8+.
 
 ## Running
